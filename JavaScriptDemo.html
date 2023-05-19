@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo 1</title>
+</head>
+<body>
+    <script>
+
+        function addNumbers(){
+            let num1 = document.getElementById("n1").value;
+            let num2 = document.getElementById("n2").value;
+            add = parseInt(num1) + parseInt(num2);
+            document.getElementById("result").value = add;
+        }
+
+        function subNumbers(){
+            let num1 = document.getElementById("n1").value;
+            let num2 = document.getElementById("n2").value;
+            sub = parseInt(num1) - parseInt(num2);
+            document.getElementById("result").value = sub;
+        }
+
+        function multiplyNumbers(){
+            let num1 = document.getElementById("n1").value;
+            let num2 = document.getElementById("n2").value;
+            multiply = parseInt(num1) * parseInt(num2);
+            document.getElementById("result").value = multiply;
+        }
+
+        function divNumbers(){
+            let num1 = document.getElementById("n1").value;
+            let num2 = document.getElementById("n2").value;
+            div = parseInt(num1) / parseInt(num2);
+            document.getElementById("result").value = div;
+        }
+
+        function clearData(){
+            document.getElementById("n1").value = "";
+            document.getElementById("n2").value = "";
+            document.getElementById("result").value = "";
+            document.getElementById("about").innerHTML = "";
+        }
+
+        function aboutMe(){
+            document.getElementById("about").innerHTML = "This is a basic calculator created using javascript."
+        }
+    </script>
+    First Number: <input type="text" size="10" id="n1">
+    <br>
+    Second Number: <input type="text" size="10" id="n2" style="margin: 5px;">
+    <br>   
+    RESULT: <input type="text" size="10" id="result" disabled style="margin-bottom: 5px;">
+    <br>
+    <button onclick="addNumbers()">Addition</button>
+    <button onclick="subNumbers()">Subtraction</button>
+    <button onclick="multiplyNumbers()">Multiply</button>
+    <button onclick="divNumbers()">Divide</button>
+    <button onclick="clearData()">Clear</button><button onclick="aboutMe()">About</button>
+    <p id="about"></p>
+
+</body>
+</html>
